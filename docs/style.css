@@ -1,0 +1,153 @@
+/* PPL Canada: Ground Oral Prep — site styles */
+/* Pure CSS, no fonts loaded externally, no tracking, no JS. */
+
+:root {
+  --bg: #F4F1E8;
+  --card: #FFFFFF;
+  --ink: #1A1F2A;
+  --ink-muted: rgba(60, 60, 67, 0.62);
+  --tint: #1B67CF;
+  --tint-pressed: #155AB8;
+  --border: rgba(60, 60, 67, 0.18);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0E1320;
+    --card: #181F32;
+    --ink: #ECEEF3;
+    --ink-muted: #9AA2B5;
+    --tint: #5198F0;
+    --tint-pressed: #7AB3F5;
+    --border: rgba(255, 255, 255, 0.10);
+  }
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+header.site {
+  margin-bottom: 32px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+header.site .eyebrow {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--tint);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+header.site h1 {
+  font: 700 28px/1.15 -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  letter-spacing: -0.4px;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+header.site .sub {
+  color: var(--ink-muted);
+  font-size: 15px;
+  margin: 0;
+}
+
+nav.site {
+  margin: 20px 0 0;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+nav.site a {
+  color: var(--tint);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+nav.site a:hover { color: var(--tint-pressed); text-decoration: underline; }
+nav.site a[aria-current="page"] {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+main h2 {
+  font: 600 13px/1 -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin: 32px 0 12px;
+}
+
+main h3 {
+  font: 600 17px/1.3 -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  margin: 24px 0 8px;
+  color: var(--ink);
+}
+
+main p, main li { color: var(--ink); }
+main p { margin: 0 0 14px; }
+
+main ul {
+  margin: 0 0 18px;
+  padding-left: 22px;
+}
+main li { margin: 0 0 6px; }
+
+main a { color: var(--tint); text-decoration: underline; }
+main a:hover { color: var(--tint-pressed); }
+
+main code, main kbd {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 14px;
+  background: rgba(60, 60, 67, 0.08);
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+.note {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin: 16px 0;
+  color: var(--ink-muted);
+  font-size: 14px;
+}
+
+footer.site {
+  margin-top: 56px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  color: var(--ink-muted);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+footer.site a { color: var(--ink-muted); text-decoration: none; }
+footer.site a:hover { color: var(--tint); }
+
+@media (max-width: 480px) {
+  .wrap { padding: 32px 18px 60px; }
+  header.site h1 { font-size: 24px; }
+}
